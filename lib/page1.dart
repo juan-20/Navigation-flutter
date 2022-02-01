@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:navigation/page2.dart';
 
 class Page1 extends StatelessWidget {
   const Page1({Key key}) : super(key: key);
@@ -17,9 +16,7 @@ class Page1 extends StatelessWidget {
             // o () é a função e o {} a ação
             ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return Page2();
-                  }));
+                  Navigator.pushReplacementNamed(context, '/page2');
                 },
                 child: Text('Go to page 2'))
           ],
